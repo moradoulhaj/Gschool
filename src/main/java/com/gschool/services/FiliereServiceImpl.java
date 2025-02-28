@@ -35,6 +35,6 @@ public class FiliereServiceImpl implements FiliereService {
 
     @Override
     public List<Filiere> getAllFilieres() {
-        return filiereDao.getFilieres();
+        return filiereDao.getAllFilieres();
     }
 }
