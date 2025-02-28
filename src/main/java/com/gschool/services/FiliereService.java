@@ -1,10 +1,9 @@
-package com.gschool.dao;
+package com.gschool.services;
 
 import com.gschool.entities.Filiere;
-
 import java.util.List;
 
-public interface FiliereDao {
+public interface FiliereService {
     void saveFiliere(Filiere filiere);
     void updateFiliere(Filiere filiere);
     void deleteFiliere(Filiere filiere);

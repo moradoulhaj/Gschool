@@ -36,7 +36,7 @@ public class StudentDaoImpl extends HibernateDaoSupport implements StudentDao {
     }
 
     @Override
-    public List<Student> getStudents() {
+    public List<Student> getAllStudents() {
         return getHibernateTemplate().loadAll(Student.class);
     }
 }

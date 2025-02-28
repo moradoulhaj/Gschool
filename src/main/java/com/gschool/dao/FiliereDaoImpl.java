@@ -31,12 +31,12 @@ public class FiliereDaoImpl extends HibernateDaoSupport implements FiliereDao {
     }
 
     @Override
-    public Filiere getFiliere(int id) {
+    public Filiere getFiliereById(int id) {
         return getHibernateTemplate().get(Filiere.class, id);
     }
 
     @Override
-    public List<Filiere> getFilieres() {
+    public List<Filiere> getAllFilieres() {
         return getHibernateTemplate().loadAll(Filiere.class);
     }
 }
