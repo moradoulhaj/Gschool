@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Manage Users</title>
+</h:head>
+<h:body>
+    <h1>Manage Users</h1>
+
+    <!-- Add User Form -->
+    <h:form>
+        <p:inputText value="#{userBean.user.nom}" placeholder="Nom" />
+        <p:inputText value="#{userBean.user.prenom}" placeholder="Prenom" />
+        <p:inputText value="#{userBean.user.login}" placeholder="Login" />
+        <p:inputText value="#{userBean.user.password}" placeholder="Password" />
+        <p:commandButton value="Save" action="#{userBean.saveUser}" />
+    </h:form>
+
+    <!-- User List -->
+    <h:dataTable value="#{userBean.users}" var="user">
+        <h:column>#{user.nom}</h:column>
+        <h:column>#{user.prenom}</h:column>
+        <h:column>#{user.login}</h:column>
+    </h:dataTable>
+</h:body>
+</html>
