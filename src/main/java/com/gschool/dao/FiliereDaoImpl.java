@@ -4,9 +4,10 @@ import com.gschool.entities.Filiere;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public class FiliereDaoImpl extends HibernateDaoSupport implements FiliereDao {
     @Autowired
     public FiliereDaoImpl(SessionFactory sessionFactory) {
