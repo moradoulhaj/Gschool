@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Manage Students</title>
+</h:head>
+<h:body>
+    <h1>Manage Students</h1>
+
+    <!-- Add Student Form -->
+    <h:form>
+        <p:inputText value="#{studentBean.student.nom}" placeholder="Nom" />
+        <p:inputText value="#{studentBean.student.prenom}" placeholder="Prenom" />
+        <p:inputText value="#{studentBean.student.cne}" placeholder="CNE" />
+        <p:commandButton value="Save" action="#{studentBean.saveStudent}" />
+    </h:form>
+
+    <!-- Student List -->
+    <h:dataTable value="#{studentBean.students}" var="student">
+        <h:column>#{student.nom}</h:column>
+        <h:column>#{student.prenom}</h:column>
+        <h:column>#{student.cne}</h:column>
+    </h:dataTable>
+</h:body>
+</html>
